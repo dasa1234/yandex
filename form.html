@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Search</title>
+</head>
+<body>
+    <h1>Поиск</h1>
+    <form action="{{ url_for('result') }}" method="get">
+        <input class="goalInput" type="text" id="year" name="year" placeholder="Введите год (2009-2028)" autocomplete="off" required>
+        <button type="submit" class="seatch-button">Найти</button>
+    </form>
+    <img src="{{ url_for('static', filename='Figure_3.png') }}">
+</body>
+</html>

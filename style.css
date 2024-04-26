@@ -1,0 +1,65 @@
+body {
+    background-color: bisque;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    margin-top: 15px;
+    max-width: 60%; 
+    max-height: 60%;
+    height: auto;
+}
+
+.seatch-button {
+    width: auto;
+    height: 45px;
+    font-size: 25px;
+}
+
+input {
+    width: auto;
+    height: 40px;
+    font-size: 25px;    
+}
+
+
+h1 {
+    font-size: 50px;
+}
+
+.murder_h {
+    margin-top: 50px;
+}
+
+p {
+    font-size: 40px;
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+
+
+
+
+
+button {
+    width: auto;
+    height: 45px;
+    font-size: 25px;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    width: 90%; /* Ширина контейнера с кнопками */
+    margin-top: 20px; /* Расстояние от кнопок до параграфа */
+}
+
+.buttons-container button {
+    flex: 1; /* Равномерно распределить пространство между кнопками */
+    margin: 25px; /* Небольшие отступы между кнопками */
+    max-width: 150px; /* Максимальная ширина кнопки */
+}

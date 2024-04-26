@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Murder Predict</title>
+</head>
+<body>
+    <h1 class="murder_h">Количество убийств в {{year}} году</h1>
+    {% if year|int <= 2019 %}
+        <p>В {{year}} году было {{murder}} убийств.</p>
+    {% else %}
+        <p>В {{year}} году будет {{murder}} убийств.</p>
+    {% endif %}
+
+
+    <div class="buttons-container">
+        {% if year|int > 2009 %}
+            <button onclick="changeYear(-1)">Год назад</button>
+        {% endif %}
+        <a href="{{ url_for('index') }}"><button>Назад</button></a>
+        {% if year|int < 2028 %}
+            <button onclick="changeYear(1)">Год вперед</button>
+        {% endif %}
+    </div>
+
+    <script>
+        function changeYear(offset) {
+            var currentYear = parseInt("{{ year }}");
+            var newYear = currentYear + offset;
+            window.location.href = "{{ url_for('result') }}?year=" + newYear;
+        }
+    </script>
+</body>
+</html>
